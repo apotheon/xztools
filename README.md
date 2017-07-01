@@ -40,3 +40,18 @@ You can get a bzip2 tarball from here:
 You can see the tools we want to replace (xzdiff, xzgrep, xzless, xzmore) here:
 
     https://git.tukaani.org/?p=xz.git;f=src/scripts;hb=HEAD
+
+## copying
+
+This project contains code borrowed from the bzip2 project.  This code is made
+available under the terms specified in the LICENSE.bzip2 file.
+
+We should ask the bzip2 devs if they would terribly mind us relicensing under
+the terms of the main xztools project license.
+
+The main xztools project license terms are specified in the LICENSE file.  This
+includes any new code contributed to this project, and the project as a
+whole/collection.
+
+For the sake of convenience, we consider this project as a whole dual-licensed
+with the bzip2 license terms at this time as well.
