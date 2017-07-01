@@ -16,3 +16,27 @@ The possibility of the submission getting rejected does exist.  If the xz
 maintainer rejects the submitted replacement tools with good cause, we'll
 endeavor to make reasonable changes to suit.  Otherwise, rejection may just
 lead to releasing this set of new tools as a separate package altogether.
+
+## development
+
+1. Modify one of the `bz*` tools to work with xz instead of bzip2.
+2. Change the name to the xz equivalent.
+3. Commit.
+4. . . .
+5. Profit!
+
+## testing
+
+We'd really like to test-drive this.  The tools are shell scripts written in
+(POSIX-ish) sh.  Any input on how to write tests for that sort of thing (with
+copyfree tools) would be nice.
+
+## other
+
+You can get a bzip2 tarball from here:
+
+    http://bzip.org/downloads.html
+
+You can see the tools we want to replace (xzdiff, xzgrep, xzless, xzmore) here:
+
+    https://git.tukaani.org/?p=xz.git;f=src/scripts;hb=HEAD
