@@ -17,6 +17,31 @@ maintainer rejects the submitted replacement tools with good cause, we'll
 endeavor to make reasonable changes to suit.  Otherwise, rejection may just
 lead to releasing this set of new tools as a separate package altogether.
 
+## clone and configure
+
+If maintainers have given you an account for this repository, you can clone
+(and check out) a repository using that account by following the following
+process.  It assumes you keep all your fossrec hosted projects in `~/fossrec`,
+repository files in `~/fossrec/repos`, and project checkout directories in
+`~/fossrec` itself.  It also assumes a username of `username`.  Change the
+commands as needed to suit your specific setup.  The `fossil user password`
+command will require you to set the password for your user account locally;
+otherwise, it just assigns you a short, random password, which will not be the
+same password as what you use on the fossrec.com website.
+
+    cd ~/fossrec/repos
+    fossil clone https://username@fossrec.com/u/apotheon/xztools/index.cgi xztools.fossil
+    fossil user password username -R xztools.fossil
+    cd ..
+    mkdir xztools
+    cd xztools
+    fossil open ../repos/xztools.fossil
+
+At this point, you should have an open checkout of the repository.  The default
+configuration for Fossil actually automatically syncs with upstream at FossRec
+on every commit.  We'll change that at some point, but for now that isn't
+really a huge problem.
+
 ## development
 
 1. Modify one of the `bz*` tools to work with xz instead of bzip2.
